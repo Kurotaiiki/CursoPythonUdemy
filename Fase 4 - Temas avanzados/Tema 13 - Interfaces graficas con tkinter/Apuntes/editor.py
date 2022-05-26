@@ -1,6 +1,3 @@
-
-from cgitb import text
-from email.headerregistry import ContentDispositionHeader
 from tkinter import *
 from tkinter import filedialog as Filledialog
 from io import open	

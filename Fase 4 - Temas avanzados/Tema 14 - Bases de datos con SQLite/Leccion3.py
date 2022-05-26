@@ -3,11 +3,10 @@ import sqlite3
 conexion=sqlite3.connect('usuarios_autoincremental.db')
 cursor=conexion.cursor()
 
-cursor.execute("SELECT * FROM usuarios WHERE id=1")
+cursor.execute("DELETE FROM usuarios")
 
-usuario = cursor.fetchone()
-print(usuario)
-
+usuarios = cursor.fetchall()
+print(usuarios)
 
 
 conexion.commit()
