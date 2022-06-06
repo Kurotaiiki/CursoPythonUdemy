@@ -85,8 +85,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
 
     def borrar_fila(self):
-        self.modelo.removeRow(self.fila)
-        self.modelo.select()
+        if self.fila>=0:
+            self.modelo.removeRow(self.fila)
+            self.modelo.select()
+        self.fila = -1
+        self.line_email.setText("")
+        self.line_nombre.setText("")
+        self.line_empleo.setText("")
 
 
 
